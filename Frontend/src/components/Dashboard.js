@@ -1,27 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import axios from "../services/schemeService";
-import "../styles/Dashboard.css";
 
-const Dashboard = () => {
-  const [schemes, setSchemes] = useState([]);
+const Grievance = () => {
+  const [complaint, setComplaint] = useState("");
 
-  useEffect(() => {
-    axios.get("/schemes").then((res) => setSchemes(res.data));
-  }, []);
+  const submitGrievance = async () => {
+    try {
+      await axios.post("/grievances", { complaint });
+      alert("Grievance submitted successfully");
+    } catch (error) {
+      alert("Error submitting grievance");
+    }
+  };
 
   return (
-    <div className="dashboard-container">
-      <h2>Recommended Schemes</h2>
-      <ul>
-        {schemes.map((scheme) => (
-          <li key={scheme._id}>
-            <h3>{scheme.name}</h3>
-            <p>{scheme.description}</p>
-          </li>
-        ))}
-      </ul>
+    <div>
+      <h2>Submit a Grievance</h2>
+      <textarea onChange={(e) => setComplaint(e.target.value)} placeholder="Describe your complaint" />
+      <button onClick={submitGrievance}>Submit</button>
     </div>
   );
 };
 
-export default Dashboard;
+export default Grievance;
