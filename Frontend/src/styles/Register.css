@@ -1,1 +1,114 @@
+/* Golden Theme Background */
+body {
+  background: #1a1a1a; /* Dark Background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
 
+/* Registration Box */
+.register-container {
+  width: 550px;
+  padding: 30px;
+  background: #222; /* Darker Container */
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  border: 1px solid #ffd700;
+}
+
+.register-container h2 {
+  color: #ffd700; /* Gold Title */
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* Input Field Styling */
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.input-row input,
+.input-row select {
+  width: 48%; /* Perfectly aligned */
+  padding: 12px;
+  border: 1px solid #ffd700;
+  border-radius: 6px;
+  font-size: 16px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Date Input Styling */
+input[type="date"] {
+  font-size: 16px;
+  padding: 12px;
+  background: #222;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+  border-radius: 6px;
+  outline: none;
+  cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0;
+  font-size: 14px;
+  color: #ffd700;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+/* Golden Button */
+.register-container button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #ffd700, #ffcc00);
+  color: black;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.register-container button:hover {
+  background: linear-gradient(135deg, #ffcc00, #ffd700);
+  box-shadow: 0 0 10px #ffd700;
+}
+
+/* Login link */
+.login-link {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.login-link a {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
